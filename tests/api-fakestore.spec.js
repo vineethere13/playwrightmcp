@@ -94,3 +94,4 @@ test.describe('Fake Store API - Product Endpoint Tests', () => {
     console.log('\n[TEST PASSED] Error handling test completed!\n');
   });
 });
+// Moved to tests/api/api-fakestore.spec.js

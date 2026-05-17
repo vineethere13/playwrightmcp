@@ -1,7 +1,7 @@
 // @ts-check
-import { expect } from '@playwright/test';
+const { expect } = require('@playwright/test');
 
-export class ScaleTreePage {
+class ScaleTreePage {
   /**
    * @param {import('@playwright/test').Page} page
    */
@@ -51,3 +51,5 @@ export class ScaleTreePage {
     await frame.locator('#1_1_21_3').click();
   }
 }
+
+module.exports = ScaleTreePage;

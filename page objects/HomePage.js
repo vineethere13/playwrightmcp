@@ -1,7 +1,7 @@
 // @ts-check
-import { expect } from '@playwright/test';
+const { expect } = require('@playwright/test');
 
-export class HomePage {
+class HomePage {
   constructor(page) {
     this.page = page;
     this.batchSummaryHeading = page.getByRole('heading', { name: 'Batch Summary' });
@@ -11,3 +11,5 @@ export class HomePage {
     await expect(this.batchSummaryHeading).toBeVisible();
   }
 }
+
+module.exports = HomePage;

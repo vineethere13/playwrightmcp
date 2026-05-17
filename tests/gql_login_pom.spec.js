@@ -36,4 +36,4 @@ test('login via GraphQL and verify batch summary widget', async ({ page, baseURL
 
   // Verify the batch summary widget is visible
   await expect(page.locator('text=Batch Summary')).toBeVisible();
-});
+  // Moved to tests/ui/gql_login_pom.spec.js

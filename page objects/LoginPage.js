@@ -1,5 +1,5 @@
 // @ts-check
-export class LoginPage {
+class LoginPage {
   constructor(page) {
     this.page = page;
     this.usernameField = page.getByRole('textbox', { name: 'User Name' });
@@ -17,3 +17,5 @@ export class LoginPage {
     await this.signInButton.click();
   }
 }
+
+module.exports = LoginPage;
