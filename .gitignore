@@ -3,6 +3,10 @@
 node_modules/
 /test-results/
 /playwright-report/
+logs/
+.env
+/screenshots
+/reports
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/

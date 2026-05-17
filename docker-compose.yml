@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  playwright:
+    build: .
+    container_name: playwright-tests
+    env_file:
+      - .env
