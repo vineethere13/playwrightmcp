@@ -1,0 +1,3 @@
+[   47391ms] [WARNING] Property `sorting` has been deprecated, please start using `maxColumnSort` instead @ http://desktop-41/esm/esm/vendor.81d123d51f026f35fcd3.js:9
+[   50018ms] [WARNING] AG Grid: as of version 24.0.0, getSortModel() is deprecated, sort information is now part of Column State. Please use columnApi.getColumnState() instead. @ http://desktop-41/esm/esm/vendor.81d123d51f026f35fcd3.js:304
+[   50019ms] [WARNING] AG Grid: as of version 24.0.0, setSortModel() is deprecated, sort information is now part of Column State. Please use columnApi.applyColumnState() instead. @ http://desktop-41/esm/esm/vendor.81d123d51f026f35fcd3.js:304

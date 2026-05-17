@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Playwright test in Edge (headed)",
+			"type": "shell",
+			"command": "npx playwright test tests/orangehrmlogin.spec.js --project=webkit --headed",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
