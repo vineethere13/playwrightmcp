@@ -1,7 +1,7 @@
 // @ts-check
 const { test } = require('@playwright/test');
-const LoginPage = require('../../page objects/LoginPage');
-const HomePage = require('../../page objects/HomePage');
+const LoginPage = require('../../page_objects/LoginPage');
+const HomePage = require('../../page_objects/HomePage');
 const loginData = require('../../Testdata/testlogin.json');
 
 test('login and verify batch summary widget using POM', async ({ page }) => {

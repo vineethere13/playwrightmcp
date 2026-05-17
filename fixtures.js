@@ -2,8 +2,8 @@
 // Playwright reusable fixtures for login and dashboard setup
 
 const { test as base } = require('@playwright/test');
-const LoginPage = require('./page objects/LoginPage');
-const HomePage = require('./page objects/HomePage');
+const LoginPage = require('./page_objects/LoginPage');
+const HomePage = require('./page_objects/HomePage');
 
 // Extend base test with login and dashboard fixtures
 const test = base.extend({

@@ -1,7 +1,7 @@
 // @ts-check
 const { test } = require('@playwright/test');
-const LoginPage = require('../../page objects/LoginPage');
-const ScaleTreePage = require('../../page objects/ScaleTreePage');
+const LoginPage = require('../../page_objects/LoginPage');
+const ScaleTreePage = require('../../page_objects/ScaleTreePage');
 const loginData = require('../../Testdata/testlogin.json');
 
 test('navigate to Store 21 and Department 3 using POM', async ({ page }) => {
