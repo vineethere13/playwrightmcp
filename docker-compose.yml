@@ -1,8 +1,21 @@
-version: '3'
+version: '3.9'
 
 services:
+  app:
+    image: mycompany/private-grocery-app:latest
+    ports:
+      - "8080:8080"
+
+    db:
+    image: postgres:15
+
   playwright:
-    build: .
-    container_name: playwright-tests
+    image: mcr.microsoft.com/playwright:v1.52.0-jammy
+    working_dir: /app
+    volumes:
+      - .:/app
     env_file:
       - .env
+    depends_on:
+      - app
+    command: npm run smoke
