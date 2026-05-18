@@ -1,7 +1,8 @@
 // @ts-check
 
-const { expect } = require('@playwright/test');
-const homeLocators = require('../locators/homePageLocators');
+
+import { expect } from '@playwright/test';
+import homeLocators from '../locators/homePageLocators.js';
 
 class HomePage {
   constructor(page) {
@@ -14,4 +15,4 @@ class HomePage {
   }
 }
 
-module.exports = HomePage;
+export default HomePage;

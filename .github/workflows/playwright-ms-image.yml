@@ -1,0 +1,106 @@
+name: Playwright Smoke CI (Microsoft Docker Image)
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+    paths:
+      - 'src/**'
+      - 'tests/**'
+
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - 'tests/**'
+
+jobs:
+  smoke-tests:
+    runs-on: ubuntu-latest
+
+    ##########################################################
+    # Run job inside Microsoft Playwright container
+    ##########################################################
+    container:
+      image: mcr.microsoft.com/playwright:v1.52.0-jammy
+
+    env:
+      DD_API_KEY: ${{ secrets.DD_API_KEY }}
+      DD_SITE: ${{ secrets.DD_SITE }}
+      BASE_URL: http://localhost:8080
+      CI: true
+
+    steps:
+      ##########################################################
+      # Checkout repo
+      ##########################################################
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      ##########################################################
+      # Install project dependencies
+      ##########################################################
+      - name: Install dependencies
+        run: npm ci
+
+      ##########################################################
+      # Start sample AUT (developer app container)
+      ##########################################################
+      - name: Start sample app container
+        run: |
+          docker run -d \
+            --name grocery-app \
+            -p 8080:8080 \
+            nginx:latest
+
+      ##########################################################
+      # Wait for application startup
+      ##########################################################
+      - name: Wait for app startup
+        run: |
+          timeout 60 bash -c \
+          'until curl -f http://localhost:8080; do sleep 5; done'
+
+      ##########################################################
+      # Execute smoke suite
+      ##########################################################
+      - name: Run smoke tests
+        run: npm run smoke
+
+      ##########################################################
+      # Upload junit.xml to Datadog
+      ##########################################################
+      - name: Upload JUnit report to Datadog
+        if: always()
+        run: |
+          npm install -g @datadog/datadog-ci
+          datadog-ci junit upload test-results/junit.xml
+
+      ##########################################################
+      # Upload Playwright HTML report
+      ##########################################################
+      - name: Upload Playwright HTML report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-html-report
+          path: playwright-report/
+
+      ##########################################################
+      # Upload Allure results
+      ##########################################################
+      - name: Upload Allure results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: allure-results
+          path: allure-results/
+
+      ##########################################################
+      # Cleanup
+      ##########################################################
+      - name: Stop app container
+        if: always()
+        run: docker stop grocery-app || true

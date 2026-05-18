@@ -1,4 +1,5 @@
 // Locators for HomePage
-module.exports = {
+const homePageLocators = {
   batchSummaryHeading: { role: 'heading', name: 'Batch Summary' }
 };
+export default homePageLocators;

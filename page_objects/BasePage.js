@@ -1,7 +1,7 @@
 // BasePage.js
 // A reusable base class for Playwright page objects with Winston logging
 
-const logger = require('../utils/logger');
+import logger from '../utils/logger.js';
 
 class BasePage {
   /**
@@ -72,4 +72,4 @@ class BasePage {
   }
 }
 
-module.exports = BasePage;
+export default BasePage;

@@ -1,7 +1,7 @@
 // @ts-check
-const { expect } = require('@playwright/test');
+import { expect } from '@playwright/test';
+import scaleTreeLocators from '../locators/scaleTreeLocators.js';
 
-const scaleTreeLocators = require('../locators/scaleTreeLocators');
 class ScaleTreePage {
   /**
    * @param {import('@playwright/test').Page} page
@@ -53,4 +53,4 @@ class ScaleTreePage {
   }
 }
 
-module.exports = ScaleTreePage;
+export default ScaleTreePage;

@@ -1,0 +1,50 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]
+  - generic [ref=e3]:
+    - heading "This site could be risky" [level=1] [ref=e4]
+    - separator [ref=e5]
+    - generic [ref=e6]:
+      - paragraph [ref=e7]: Advanced Security blocked access to
+      - paragraph [ref=e8]: http://your-app-url.com/?tr_uuid=20260518-1348-597d-bc40-bce9563face5&fp=-7
+    - generic [ref=e9]:
+      - paragraph [ref=e10]: This site might compromise your device or contain high-risk content.
+      - paragraph [ref=e11]: To avoid these risks, we recommend avoiding this site.
+    - link "Proceed Anyway" [ref=e13] [cursor=pointer]:
+      - /url: http://your-app-url.com/?tr_uuid=20260518-1348-597d-bc40-bce9563face5&fp=-7
+  - generic [ref=e14]:
+    - heading "Ce site pourrait compromettre la sécurité" [level=1] [ref=e15]
+    - separator [ref=e16]
+    - generic [ref=e17]:
+      - paragraph [ref=e18]: La fonction de Sécurité avancée a bloqué l’accès à
+      - paragraph [ref=e19]: http://your-app-url.com/?tr_uuid=20260518-1348-597d-bc40-bce9563face5&fp=-7
+    - generic [ref=e20]:
+      - paragraph [ref=e21]: Pour éviter ces risques, nous recommandons d’éviter ce site.
+      - paragraph [ref=e22]: Ce site pourrait compromettre votre appareil ou contenir du contenu présentant un risque élevé.
+    - link "Continuer quand même" [ref=e24] [cursor=pointer]:
+      - /url: http://your-app-url.com/?tr_uuid=20260518-1348-597d-bc40-bce9563face5&fp=-7
+  - generic [ref=e25]:
+    - heading "Este sitio podría ser arriesgado" [level=1] [ref=e26]
+    - separator [ref=e27]
+    - generic [ref=e28]:
+      - paragraph [ref=e29]: Advanced Security bloqueó el acceso a
+      - paragraph [ref=e30]: http://your-app-url.com/?tr_uuid=20260518-1348-597d-bc40-bce9563face5&fp=-7
+    - generic [ref=e31]:
+      - paragraph [ref=e32]: Este sitio puede poner en peligro a tu dispositivo o tener contenido de alto riesgo.
+      - paragraph [ref=e33]: Para evitar estos riesgos, recomendamos evitar este sitio.
+    - link "Continuar de todas formas" [ref=e35] [cursor=pointer]:
+      - /url: http://your-app-url.com/?tr_uuid=20260518-1348-597d-bc40-bce9563face5&fp=-7
+  - generic [ref=e36]:
+    - heading "Questo sito potrebbe essere pericoloso" [level=1] [ref=e37]
+    - separator [ref=e38]
+    - generic [ref=e39]:
+      - paragraph [ref=e40]: Wifi Sicuro ha bloccato l'accesso a
+      - paragraph [ref=e41]: http://your-app-url.com/?tr_uuid=20260518-1348-597d-bc40-bce9563face5&fp=-7
+    - generic [ref=e42]:
+      - paragraph [ref=e43]: Questo sito potrebbe compromettere il dispositivo o includere contenuti ad alto rischio.
+      - paragraph [ref=e44]: Per evitare questi rischi, consigliamo di non visitare questo sito.
+    - link "Procedi comunque" [ref=e46] [cursor=pointer]:
+      - /url: http://your-app-url.com/?tr_uuid=20260518-1348-597d-bc40-bce9563face5&fp=-7
+```
