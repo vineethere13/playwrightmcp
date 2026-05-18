@@ -1,10 +1,12 @@
 // @ts-check
+
 const { expect } = require('@playwright/test');
+const homeLocators = require('../locators/homePageLocators');
 
 class HomePage {
   constructor(page) {
     this.page = page;
-    this.batchSummaryHeading = page.getByRole('heading', { name: 'Batch Summary' });
+    this.batchSummaryHeading = page.getByRole(homeLocators.batchSummaryHeading.role, { name: homeLocators.batchSummaryHeading.name });
   }
 
   async expectBatchSummaryVisible() {

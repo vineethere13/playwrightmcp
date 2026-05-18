@@ -35,5 +35,6 @@ test('login via GraphQL and verify batch summary widget', async ({ page, baseURL
   await page.goto(baseURL + '/HomeScreen');
 
   // Verify the batch summary widget is visible
-  await expect(page.locator('text=Batch Summary')).toBeVisible();
+  const homeLocators = require('../locators/homePageLocators');
+  await expect(page.getByRole(homeLocators.batchSummaryHeading.role, { name: homeLocators.batchSummaryHeading.name })).toBeVisible();
   // Moved to tests/ui/gql_login_pom.spec.js

@@ -1,10 +1,11 @@
 // @ts-check
+const loginLocators = require('../locators/loginPageLocators');
 class LoginPage {
   constructor(page) {
     this.page = page;
-    this.usernameField = page.getByRole('textbox', { name: 'User Name' });
-    this.passwordField = page.getByRole('textbox', { name: 'Password' });
-    this.signInButton = page.getByRole('button', { name: 'Sign In' });
+    this.usernameField = page.getByRole(loginLocators.usernameField.role, { name: loginLocators.usernameField.name });
+    this.passwordField = page.getByRole(loginLocators.passwordField.role, { name: loginLocators.passwordField.name });
+    this.signInButton = page.getByRole(loginLocators.signInButton.role, { name: loginLocators.signInButton.name });
   }
 
   async goto() {

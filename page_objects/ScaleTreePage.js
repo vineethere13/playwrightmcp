@@ -1,6 +1,7 @@
 // @ts-check
 const { expect } = require('@playwright/test');
 
+const scaleTreeLocators = require('../locators/scaleTreeLocators');
 class ScaleTreePage {
   /**
    * @param {import('@playwright/test').Page} page
@@ -37,8 +38,8 @@ class ScaleTreePage {
   async clickStore21() {
     const frame = await this.getScaleTreeFrame();
     // Wait for Store 21 element to be visible
-    await frame.waitForSelector('#1_1_21', { state: 'visible', timeout: 10000 });
-    await frame.locator('#1_1_21').click();
+    await frame.waitForSelector(scaleTreeLocators.store21, { state: 'visible', timeout: 10000 });
+    await frame.locator(scaleTreeLocators.store21).click();
   }
 
   /**
@@ -47,8 +48,8 @@ class ScaleTreePage {
   async clickDepartment3() {
     const frame = await this.getScaleTreeFrame();
     // Wait for Department 3 element to be visible
-    await frame.waitForSelector('#1_1_21_3', { state: 'visible', timeout: 10000 });
-    await frame.locator('#1_1_21_3').click();
+    await frame.waitForSelector(scaleTreeLocators.department3, { state: 'visible', timeout: 10000 });
+    await frame.locator(scaleTreeLocators.department3).click();
   }
 }
 
