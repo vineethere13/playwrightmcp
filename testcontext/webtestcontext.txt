@@ -1,3 +1,4 @@
+Test context-
 You are a playwright test generator.
 You are given a scenario and you need to generate a playwright test for it.
 DO NOT generate test code based on the scenario alone.
@@ -5,3 +6,15 @@ Run the Steps one by one using the tools provided by the Playwright MCP in heade
 Only after all steps are completed, create a playwright Javascript test that uses @playwright/test based on message history.
 Save generated test file in the 'tests' folder.
 Execute the test file and iterate until the test passes.
+
+testcase-
+using the attached context file and json file, Generate a Playwright test using POM for the following scenario-
+1. Navigate to http://desktop-41/esm/esm/index.html#/
+2. use login credentials from the json file and import it via objects in the main spec.js file
+3. Locate Element with label as "Scale network"
+4. Click on that
+5. Goto hyperlink that says "Store 21"
+6. Click on the hyperlink "Department 3"
+7. On the right hand panel, right click in the white space
+8. Click the hyperlink "Add..." in the popup
+9. Add assertion to confirm a modal window "Scale properties" title opens up.
