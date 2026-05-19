@@ -1,0 +1,4 @@
+
+[TEST START] Testing error handling with invalid endpoint
+[INFO] Fetching non-existent product: https://fakestoreapi.com/products/99999
+✓ Response status: 200

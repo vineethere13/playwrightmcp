@@ -1,5 +1,5 @@
-const { test, expect } = require('@playwright/test');
-const Ajv = require('ajv');
+import { test, expect, request } from '@playwright/test';
+import Ajv from 'ajv';
 
 // Initialize AJV for JSON schema validation
 const ajv = new Ajv();

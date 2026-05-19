@@ -1,0 +1,30 @@
+
+[TEST START] Fetching product from: https://fakestoreapi.com/products/1
+[STEP 1-2] Sending GET request to API endpoint...
+[STEP 3] Verifying response status code...
+✓ Response status: 200 OK
+[INFO] Response body received and parsed successfully
+[STEP 4] Validating response contains required keys...
+✓ Key 'id' is present in response
+✓ Key 'title' is present in response
+✓ Key 'price' is present in response
+✓ Key 'category' is present in response
+✓ Key 'description' is present in response
+[STEP 5] Validating response data types using JSON schema...
+✓ Response matches expected JSON schema
+  - id type: number (number)
+  - title type: string (string)
+  - price type: number (number)
+  - category type: string (string)
+  - description type: string (string)
+[STEP 6] Logging product information...
+
+📦 Product Information:
+   Title: Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+   Price: $109.95
+   Category: men's clothing
+   ID: 1
+   Description: Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in t...
+
+[TEST PASSED] All validations completed successfully!
+
